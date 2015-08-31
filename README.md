@@ -1,3 +1,8 @@
+## NOTICE:
+*Now that Kernel 4.2 [has been released](http://lkml.iu.edu/hypermail/linux/kernel/1508.3/04416.html) which contains a driver for mt7601u, this repository is now deprecated.*
+
+--------
+
 ## MT7601U Linux driver
 
 Many cheap USB wifi dongles use the MediaTek MT7601U chip.
