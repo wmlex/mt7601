@@ -1,5 +1,5 @@
 ## NOTICE:
-*Now that Kernel 4.2 [has been released](http://lkml.iu.edu/hypermail/linux/kernel/1508.3/04416.html) which contains a driver for mt7601u, this repository is now deprecated.*
+*Now that Kernel 4.2 has been released which contains [a driver for mt7601u](https://github.com/torvalds/linux/tree/master/drivers/net/wireless/mediatek/mt7601u), this repository is now deprecated.*
 
 --------
 
@@ -10,7 +10,7 @@ Many cheap USB wifi dongles use the MediaTek MT7601U chip.
 <img src="http://porjo.github.io/mt7601/dongle1.jpg" width="150">
 <img src="http://porjo.github.io/mt7601/dongle2.jpg" width="150">
 
-Unfortunately, there is no driver in Linux kernel source tree which can work with this chip, yet. This repository is based on the original driver released by MediaTek which was rejected from Linux kernel because of the poor code quality. The repository includes various stability and performance improvements for kernels >= 3.x and has been tested with the following kernels:
+This repository is based on the original driver released by MediaTek which was rejected from Linux kernel because of the poor code quality. The repository includes various stability and performance improvements for kernels >= 3.x and has been tested with the following kernels:
 
 - 3.15.10-200.fc20.x86_64
 - 3.16.1-301.fc21.x86_64
@@ -18,10 +18,6 @@ Unfortunately, there is no driver in Linux kernel source tree which can work wit
 - 3.17.0-0.rc2.git3.1.fc22.i686
 - 3.17.0-0.rc2.git3.1.fc22.x86_64
 - 3.12.26-1.20140808git4ab8abb.rpfr20.armv6hl.bcm2708
-
-### Unofficial mt7601u driver
-
-For kernels 3.19 and later a new mac80211 driver was written from scratch by the community.  It was done because there is very little chance that this vendor driver will ever become part of official Linux kernel. If you have Linux kernel version between 3.19 and 4.2 you can download the new driver from https://github.com/kuba-moo/mt7601u. If you have Linux 4.2 or later the new driver is already part of the kernel (it's called mt7601u). Note that from Linux 4.2 on you will have to blacklist the mt7601u driver to continue using code from this repository.
 
 ### Usage
 
@@ -60,7 +56,7 @@ There is a PPA repo available containing a DKMS-capable package based on this re
 
 https://code.launchpad.net/~thopiekar/+archive/ubuntu/mt7601
 
-Thanks to @thopiekar 
+Thanks to @thopiekar
 
 
 ### History
@@ -83,10 +79,11 @@ Generally better than before.
 A second patch was released on 31 Aug, 2014 with the following comment:
 
 ```
-A new patch[1] mainly based on patches at 
+A new patch[1] mainly based on patches at
 https://github.com/ashaffer/rt3573sta
 and several network throughput tests via the Iperf.
 ```
+Starting around Feb 2015, [a new mac80211 driver was written from scratch by the community](https://github.com/kuba-moo/mt7601u), lead by **@kuba-moo**. It went on to become the official Linux driver for mt7601u. It was done because there is very little chance that this vendor driver would ever become part of official Linux kernel.
 
 ### Credits
 
